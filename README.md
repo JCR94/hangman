@@ -18,9 +18,15 @@ The only requirement is a verson of Python (preferably Python 3) being installed
 
 To run a demo of the game, enter the following line in a terminal
 
-> python milestone4.py
+> python hangman
 
-or use a python compiler/interpreter to run milestone.py for you.
+if you're in the same directory as the README.md file, or
+
+> python milestone5.py
+
+if you're inside the lowest hangman directory.
+
+Alternatively, use a python compiler/interpreter to run milestone.py for you.
 
 ## How to play
 
@@ -34,7 +40,19 @@ Have fun!
 
 ## File structure
 
-Placeholder for file structure once project is more developed.
+```bash
+.
+├── hangman
+│   ├── __main__.py     # __main__.py allows to run directory
+│   ├── __pycache__
+│   ├── milestone.py    # 1st version of code
+│   ├── milestone2.py   # 2nd version of code
+│   ├── milestone3.py   # 3rd version of code
+│   ├── milestone4.py   # 4th version of code, has playable loop.
+│   └── milestone5.py   # 5th version of code, final version.
+└── README.md
+
+```
 
 ## License Information
 
