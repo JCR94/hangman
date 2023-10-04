@@ -28,25 +28,27 @@ class Hangman:
             guess = input("Please enter a single letter: ")
             if len(guess) != 1 or not guess.isalpha():
                 print("Invalid letter. Please, enter a single alphabetical character.")
-            elif guess in self.list_of_guesses:
+            elif guess.lower() in self.list_of_guesses:
                 print("You already tried that letter!")
             else:
                 break
         self.check_guess(guess)
-        self.list_of_guesses.append(guess)
+        self.list_of_guesses.append(guess.lower())
 
-def play_game(word_list):
-    num_lives = 5
-    game = Hangman(word_list, num_lives)
-    while True:
-        if game.num_lives == 0:
-            print("You lost!")
-            break
-        elif game.num_letters > 0:
-            game.ask_for_input()
-        else:
-            print("Congratulations. You won the game!")
-            break
+    @classmethod
+    def play_game(cls,word_list):
+        num_lives = 5
+        game = Hangman(word_list, num_lives)
+        while True:
+            if game.num_lives == 0:
+                print("You lost!")
+                break
+            elif game.num_letters > 0:
+                game.ask_for_input()
+            else:
+                print("Congratulations. You won the game!")
+                break
 
-myList = ["banana", "lime", "lemon", "orange", "mandarin"]
-play_game(myList)
+if __name__ == "__main__":
+    myList = ["banana", "lime", "lemon", "orange", "mandarin"]
+    Hangman.play_game(myList)
