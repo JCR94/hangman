@@ -1,5 +1,6 @@
 import random
 
+
 word_list = ["banana", "lime", "lemon", "orange", "mandarin"]
 word = random.choice(word_list)
 

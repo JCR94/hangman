@@ -1,7 +1,8 @@
 import random
 
+
 class Hangman:
-    def __init__(self,word_list,num_lives=5):
+    def __init__(self, word_list, num_lives = 5):
         self.word_list = word_list
         self.num_lives = num_lives
 
@@ -10,7 +11,7 @@ class Hangman:
         self.num_letters = len(set(self.word)) # number of unique letters in the word that have not yet been guessed.
         self.list_of_guesses = [] # list of the guesses that have already been tried.
 
-    def check_guess(self,guess):
+    def check_guess(self, guess):
         guess = guess.lower()
         if guess in self.word.lower():
             print(f"Good guess! {guess} is in the word.")
